@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "backtester_framework"
+version = "0.1.0"
+description = "Backtesting framework for trading strategies."
+authors = [
+  { name="MEYER Théo", email="theo.meyer@dauphine.eu"},
+  { name="RABHI Alexandre", email="alexandr3.rabhi@protonmail.com"},
+  { name="ZANIN Julien", email="julienzanin@outlook.fr" }
+]
+
+keywords = ["backtesting", "trading", "finance", "investment"]
+classifiers = [
+  "Programming Language :: Python :: 3.12",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "pandas",
+  "numpy",
+  "matplotlib",
+  "seaborn",
+  "plotly",
+  "requests",
+  "dash",
+  "dash_bootstrap_components",
+  "statsmodels",
+  "scikit-learn",
+]
+
+[tool.setuptools]
+package-dir = {"" = "backtester_framework"}
+
+[tool.setuptools.packages.find]
+where = ["backtester_framework"]
+include = ["backtester_framework*"]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "pytest-cov",
+  "mypy",
+  "black"
+]
