@@ -82,9 +82,7 @@ class LinearTrendStrategy(Strategy):
         self.optimal_threshold = best_threshold
         self.is_fitted = True
 
-    def get_position(
-        self, historical_data: pd.DataFrame, current_position: float
-    ) -> float:
+    def get_position(self, historical_data: pd.DataFrame, current_position: float) -> float:
         """
         Identify the position according to the trend slope
 

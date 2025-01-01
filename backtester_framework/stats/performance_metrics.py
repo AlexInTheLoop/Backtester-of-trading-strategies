@@ -1,14 +1,7 @@
 import numpy as np
 import pandas as pd
-from typing import List, Optional
-from scipy import stats
 from backtester_framework.stats.core_metrics import annualized_return, annualized_std
-from backtester_framework.stats.tail_metrics import (
-    skewness,
-    kurtosis,
-    drawdown,
-    max_drawdown,
-)
+from backtester_framework.stats.tail_metrics import skewness, kurtosis, drawdown, max_drawdown
 
 
 def sharpe_ratio(returns: pd.Series, risk_free_rate: float, N: int) -> float:

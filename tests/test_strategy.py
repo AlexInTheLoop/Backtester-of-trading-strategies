@@ -92,8 +92,7 @@ def test_custom_strategy(multi_sample_data):
 
     @strategy(name="CustomStrategy")
     def custom_strategy(
-        historical_data: pd.DataFrame, current_position: float, threshold: float = 0.5
-    ) -> float:
+        historical_data: pd.DataFrame, current_position: float, threshold: float = 0.5) -> float:
         returns = historical_data["close"].pct_change()
         if returns.iloc[-1] > threshold:
             return 1.0

@@ -55,22 +55,22 @@ def trend_indicator(
     window_size: int = 179,
     half_lives: List[float] = [1, 2.5, 5, 10, 20, 40],
     decay_factors: List[float] = [
-        0.5,
-        0.757858283,
-        0.870550563,
-        0.933032992,
-        0.965936329,
-        0.982820599,
-    ],
+                                    0.5,
+                                    0.757858283,
+                                    0.870550563,
+                                    0.933032992,
+                                    0.965936329,
+                                    0.982820599,
+                                ],
     normalization_factors: List[float] = [
-        1.0000,
-        1.0000,
-        1.0000,
-        1.0000,
-        1.0020,
-        1.0462,
-    ],
-) -> float:
+                                            1.0000,
+                                            1.0000,
+                                            1.0000,
+                                            1.0000,
+                                            1.0020,
+                                            1.0462,
+                                        ],
+    ) -> float:
     """
     Strategy based on multiple EMAs comparison to detect trends
 

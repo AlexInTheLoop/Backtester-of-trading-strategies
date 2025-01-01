@@ -86,9 +86,7 @@ class ARIMAStrategy(Strategy):
                 print(f"ARIMA fitting error: {e}")
                 self.is_fitted = False
 
-    def get_position(
-        self, historical_data: pd.DataFrame, current_position: float
-    ) -> float:
+    def get_position(self, historical_data: pd.DataFrame, current_position: float) -> float:
         """
         Determine the position based on the ARIMA model forecast
 

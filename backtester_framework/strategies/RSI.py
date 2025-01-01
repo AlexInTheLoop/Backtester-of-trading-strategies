@@ -3,13 +3,8 @@ import pandas as pd
 
 
 @strategy(name="RSI")
-def rsi_strategy(
-    historical_data: pd.DataFrame,
-    current_position: float,
-    rsi_period: int = 14,
-    overbought: float = 70,
-    oversold: float = 30,
-) -> float:
+def rsi_strategy(historical_data: pd.DataFrame,current_position: float,rsi_period: int = 14,
+                overbought: float = 70, oversold: float = 30,) -> float:
     """
     Strategy based on the Relative Strength Index:
         - Buy order in oversold zone

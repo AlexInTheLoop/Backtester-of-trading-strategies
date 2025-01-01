@@ -89,7 +89,6 @@ def test_backtester_with_costs(daily_data):
     backtester_with_costs = Backtester(daily_data, commission=0.001, slippage=0.001)
     result_with_costs = backtester_with_costs.run(strategy)
 
-    # Vérifier que les coûts ont un impact négatif pour chaque actif
     for asset_name in result_with_costs.nav.keys():
         assert (
             result_with_costs.nav[asset_name].iloc[-1]
